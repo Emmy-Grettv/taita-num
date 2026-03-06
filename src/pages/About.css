@@ -1,0 +1,320 @@
+/* ===== PAGE HERO (shared) ===== */
+.page-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    background: var(--navy);
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(31, 111, 235, 0.2) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 194, 255, 0.12) 0%, transparent 50%);
+}
+
+.page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: url('/hero_banner.png') center/cover no-repeat;
+    opacity: 0.08;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.page-hero__sub {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-top: 20px;
+}
+
+/* ===== ABOUT SPECIFIC ===== */
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.about-highlight-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(31, 111, 235, 0.08);
+    border: 1px solid rgba(31, 111, 235, 0.15);
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+
+.about-highlight-icon {
+    color: var(--green);
+    font-size: 15px;
+}
+
+.about-img-stack {
+    position: relative;
+}
+
+.about-img-main {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-img-badge {
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(10, 37, 64, 0.07);
+}
+
+/* Leadership */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.leadership-card {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Photo wrapper — shows the photo or the initials avatar */
+.leadership-photo-wrap {
+    flex-shrink: 0;
+}
+
+.leadership-photo {
+    width: 180px;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* Initials fallback — shown when photo fails or isn't provided */
+.leadership-avatar {
+    width: 180px;
+    height: 220px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(31, 111, 235, 0.35);
+    flex-shrink: 0;
+}
+
+.leadership-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.leadership-role {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+.leadership-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+.leadership-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    border: 1.5px solid rgba(31, 111, 235, 0.25);
+    padding: 6px 14px;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+.leadership-linkedin:hover {
+    background: var(--blue);
+    color: #fff;
+    border-color: var(--blue);
+}
+
+/* Values */
+.value-card {
+    padding: 32px 28px;
+}
+
+.value-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(31, 111, 235, 0.1), rgba(0, 194, 255, 0.07));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: all 0.3s;
+}
+
+.value-card:hover .value-icon {
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: #fff;
+}
+
+.value-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.value-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue), var(--cyan), transparent);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 24px 1fr;
+    gap: 0 20px;
+    align-items: flex-start;
+    padding-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-year {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--cyan);
+    text-align: right;
+    padding-top: 2px;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    border: 3px solid var(--navy);
+    box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.25);
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    align-self: start;
+}
+
+.timeline-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.timeline-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.58);
+    line-height: 1.7;
+}
+
+/* RRA tags */
+.rra-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.about-rra-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 56px;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .timeline-item {
+        grid-template-columns: 60px 20px 1fr;
+    }
+}
